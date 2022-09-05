@@ -72,7 +72,7 @@ class Comment(db.Model):
 
     text = db.Column(db.Text, nullable=False)
 
-db.create_all()
+
 def admin_only(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
