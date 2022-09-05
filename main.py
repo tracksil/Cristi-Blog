@@ -12,12 +12,12 @@ from functools import wraps
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1")
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://qznzpizsqgfzkj:6a81673afacbdaf495e48ca407c33604b71e7eaa9c5f661ea9b1817e6d3e2400@ec2-34-246-86-78.eu-west-1.compute.amazonaws.com:5432/de110tmp4f1ekh"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
